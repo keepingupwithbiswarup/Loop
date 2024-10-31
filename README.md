@@ -1,16 +1,28 @@
-# loopedin
 
-A new Flutter project.
+# Loop: A Social Media App
 
-## Getting Started
+Created a responsive cross-platform social media mobile application using Flutter with core features as sharing photos and 
+videos, commenting and liking posts and editing one’s profile layout. Used Firebase as cloud storage to manage user media 
+assets data, along with integration of Google Sign-In API for secure authentication. Implemented Riverpod for dynamic 
+state management and applied MVVM Architecture to ensure scalable code.  
 
-This project is a starting point for a Flutter application.
+## Deployment
 
-A few resources to get you started if this is your first Flutter project:
+To deploy this project, navigate to the project directory and run
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```bash
+  flutter doctor
+  flutter run
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Features
+
+- Posting Photos and Videos
+- Google Authentication Integration
+- Cross platform
+- Liking, Commenting on Posts
+- Dynamic State Management
+- Designing custom user profile layout
+
+
