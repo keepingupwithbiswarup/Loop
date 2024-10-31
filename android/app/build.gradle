@@ -1,0 +1,52 @@
+// In your app-level build.gradle file
+
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    // Google services plugin should be applied here
+    id 'com.google.gms.google-services'
+}
+
+
+
+
+android {
+    namespace = "com.loop"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.loop"
+        minSdk = 23
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+        multiDexEnabled = true
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+// Firebase BoM for managing Firebase dependencies
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:33.2.0')
+    // Add your Firebase dependencies here, without specifying versions
+}
